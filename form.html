@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/jpg" href="images/pic.jpg"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>It'z Zai</title>
+    </head>
+<!-- GET is for insensitive data while POST is for sensitive data-->
+<!--input tag is a box where you can type where text has a lot of types-->
+<!--For attribute do when you click a label you will direct to the text box, use ID to function-->
+<!--use Required attribute if you don't want to leave the box blanky-->
+<!--minlength attributes are the characters limit same to maxlength limit-->
+<!--placeholder attribute is a text inside a box that could be a guide text-->
+<!--enctype functions is it simply allows you to put large type of data or file-->
+    <body>
+        <form action="index.php" method="POST" enctype="multipart/form-data">
+<!--USER-->
+            <br><label for="username">username :</label>
+            <input type="text" id="username" placeholder="your username" minlength="6" required><br>
+<!--PASSWORD-->
+            <br><label for="pass">password :</label>
+            <input type="password" id="pass" placeholder="your password" minlength="6" maxlength="7" required><br>
+<!--EMAIL-->
+            <br><lable for="email">E-mail :</lable>
+            <input type="email" placeholder="your email" required><br>
+<!--NUMBER-->
+            <br><label for="no.">Contact Number :</label>
+            <input type="tel" id="no." placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required><br>
+<!--DATE-->
+            <br><label for="date">Date :</label>
+            <input type="date" id="date" placeholder="select date today" required><br>
+<!--TIME-->
+            <br><label for="time">Time :</label>
+            <input type="time" id="time" placeholder="select time" required><br>
+<!--QUANTITY-->
+<!--value means default value if you set it from 1 you'll see the text box has default value of 1-->
+            <br><label for="quanti">Quantity</label>
+            <input type="number" id="quanti" min="0" max="100" value="1"><br>
+<!--TITLE/PROFESSION-->
+<!--Name"" attribute sets labels you can choose\if you want to choose only one then put name attributes on each labels-->
+            <br><label for="title">Title/Profession</label>
+            
+            <br><label for="mr.">Mr.</label>
+            <input type="radio" id="Mr." value="Mr." name="title">
+
+            <br><label for="ms.">Ms.</label>
+            <input type="radio" id="Ms." value="Ms." name="title">
+
+            <br><label for="phd.">PhD.</label>
+            <input type="radio" id="phd." value="PhD." name="title">
+            
+            <br><label for="engr.">Engr.</label>
+            <input type="radio" id="engr." value="Engr." name="title">
+
+            <br><label for="mit.">MIT.</label>
+            <input type="radio" id="mit." value="Mit." name="title"><br>
+
+            <br><label for="payment">Payment Method</label>
+            <select id="payment">
+                <option value="paypal">Paypal</option>
+                <option value="gcash">Gcash</option>
+                <option value="mastercard">Master Card</option>
+            </select><br>
+
+            <br><label for="subscrb">Subscribe</label>
+            <input type="checkbox" id="subscrb"><br>
+
+            <label for="comms">Leave Comment Here :</label><br>
+            <textarea id="comms" rows="5" cols="50"></textarea><br>
+<!--I choose to apply no label for this double word na kasi ng file habol ko lang yung of ID-->
+            <br><label for="file"></label>
+            <input type="file" id="file" accept="images/png, images/jpeg"><br>
+
+            <br><input type="reset"><br>
+            <br><input type="submit"><br>
+
+        </form>
+    </body>
+</html>
